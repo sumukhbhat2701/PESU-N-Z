@@ -1,0 +1,192 @@
+
+ Performance counter stats for 'taskset -c 1 ./a.out 100 1 2':
+
+            52,633      cache-misses                     #   34.070 % of all cache refs    
+          1,54,486      cache-references                                                   
+
+       0.002059076 seconds time elapsed
+
+       0.001854000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 100 2 2':
+
+            26,831      cache-misses                     #   18.660 % of all cache refs    
+          1,43,791      cache-references                                                   
+
+       0.001338379 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001335000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 100 1 3':
+
+          2,96,946      cache-misses                     #   47.039 % of all cache refs    
+          6,31,270      cache-references                                                   
+
+       0.022976651 seconds time elapsed
+
+       0.019075000 seconds user
+       0.003815000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 100 2 3':
+
+          2,06,617      cache-misses                     #    5.116 % of all cache refs    
+         40,38,547      cache-references                                                   
+
+       0.024279199 seconds time elapsed
+
+       0.024244000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 500 1 2':
+
+            45,530      cache-misses                     #   18.948 % of all cache refs    
+          2,40,292      cache-references                                                   
+
+       0.005990844 seconds time elapsed
+
+       0.002982000 seconds user
+       0.002982000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 500 2 2':
+
+            53,933      cache-misses                     #   20.678 % of all cache refs    
+          2,60,817      cache-references                                                   
+
+       0.006502825 seconds time elapsed
+
+       0.006406000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 500 1 3':
+
+       3,91,20,503      cache-misses                     #   76.588 % of all cache refs    
+       5,10,79,373      cache-references                                                   
+
+       2.341300790 seconds time elapsed
+
+       2.209068000 seconds user
+       0.132063000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 500 2 3':
+
+      50,69,30,726      cache-misses                     #   72.804 % of all cache refs    
+      69,62,92,045      cache-references                                                   
+
+       9.332217736 seconds time elapsed
+
+       9.218238000 seconds user
+       0.111978000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 1000 1 2':
+
+          1,63,183      cache-misses                     #   31.560 % of all cache refs    
+          5,17,050      cache-references                                                   
+
+       0.019332434 seconds time elapsed
+
+       0.019256000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 1000 2 2':
+
+          1,57,637      cache-misses                     #   26.004 % of all cache refs    
+          6,06,207      cache-references                                                   
+
+       0.020299343 seconds time elapsed
+
+       0.020231000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 1000 1 3':
+
+      29,41,57,719      cache-misses                     #   77.252 % of all cache refs    
+      38,07,78,640      cache-references                                                   
+
+      18.774129423 seconds time elapsed
+
+      17.776325000 seconds user
+       0.996018000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 1000 2 3':
+
+    3,78,90,49,143      cache-misses                     #   23.964 % of all cache refs    
+   15,81,12,52,935      cache-references                                                   
+
+     146.537661793 seconds time elapsed
+
+     145.544588000 seconds user
+       0.979923000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 5000 1 2':
+
+         53,65,490      cache-misses                     #   74.763 % of all cache refs    
+         71,76,630      cache-references                                                   
+
+       0.456600563 seconds time elapsed
+
+       0.440408000 seconds user
+       0.016014000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 5000 2 2':
+
+         65,76,724      cache-misses                     #    5.193 % of all cache refs    
+      12,66,38,655      cache-references                                                   
+
+       0.536942041 seconds time elapsed
+
+       0.517002000 seconds user
+       0.019884000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 10000 1 2':
+
+       2,01,15,789      cache-misses                     #   76.315 % of all cache refs    
+       2,63,58,756      cache-references                                                   
+
+       1.814013022 seconds time elapsed
+
+       1.741899000 seconds user
+       0.071913000 seconds sys
+
+
+
+ Performance counter stats for 'taskset -c 1 ./a.out 10000 2 2':
+
+       3,74,37,380      cache-misses                     #    6.267 % of all cache refs    
+      59,73,49,957      cache-references                                                   
+
+       2.176546271 seconds time elapsed
+
+       2.111690000 seconds user
+       0.063869000 seconds sys
+
+

@@ -1,0 +1,11 @@
+C profiler:
+ How it works?
+ 	1) instrumentation: inserting some peice of code before and after calling functions: deterministic profilers: comes at a cost of measuring time additionally: but very accurate
+ 	tradeoff accuracy and high cost:
+ 	2) sampling: assuming 80% of work will be done in 20% of the code: just look once in a while. Eg: gprof
+ 	update a table looking at interrupts of certain frequencies(mostly at some system clock frequency)
+ 	based on PC value at that time of interrupt and using offsets, it estimates the time spent in that function 
+
+On Stack: return addresses etc are PC values at some time and are virtual addresses
+ 
+ 	

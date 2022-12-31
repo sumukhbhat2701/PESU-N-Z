@@ -1,0 +1,11 @@
+use method:
+	- performance with POV of system, not s/w
+
+Modeling: Experimentation and observation. (have a physical system, not for a hypothetical situation - this is when models help)
+Model: Simulation of a physical world
+
+multimodel dist: cache? some optimization to make the system faster. Eg. Cache
+
+heat map
+
+

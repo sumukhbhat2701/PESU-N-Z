@@ -1,0 +1,12 @@
+
+ Performance counter stats for 'taskset -c 1 ./a.out 100 2 2':
+
+            41,045      cache-misses                     #   22.901 % of all cache refs    
+          1,79,231      cache-references                                                   
+
+       0.015834470 seconds time elapsed
+
+       0.000000000 seconds user
+       0.012823000 seconds sys
+
+

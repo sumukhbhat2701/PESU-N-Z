@@ -1,0 +1,41 @@
+time ./a.out 
+- for just 1 process
+- real time = user time + system time = in user space + in kernel space
+	= start to end of execution
+	say maynot be proper exec time in multithreaded, multicore systems
+	- doesnt include queuing time
+	- There is a h/w bit which denotes user space or kernel space the execution is in => OS keeps track of time in user space and kernel space using this bit (with respect to the timer interrupt)
+
+Performance doesnt just depend on the code written, but also the underlying s/w stack:
+
+executable
+--------------------
+compiler | libs | web servers(which caches). Eg: nginx | Load balancers, proxy, firewalls etc
+---------------------
+Runtime env Eg: Java, Go etc | DB
+---------------------
+virtual env: docker, VMs
+----------------------
+system calls
+----------------------
+drivers
+----------------------
+H/w
+
+ldd: ldd  prints the shared objects (shared libraries) required by each program or shared object specified on the command line.
+ldd ./a.out
+
+ELF is the abbreviation for Executable and Linkable Format and defines the structure for binaries, libraries, and core files
+
+metrics:
+throughput: #requests that can processed in unit time
+avg latency of all requests - not enough
+worst latency of all requests
+95/99/99.9 percentile latency
+99.9 percentile latency: tail latency: a problem of scale: billions of requests per day: latency(X) vs #requests(Y): very less requests have high latency: problem - which part of stack we need to debug  
+
+profiler: which part of program/function am I spend more time in
+gcc -pg sort.c // other files in same line for linking. -pg for all lines/commands if compiled and linked separately
+./a.out // generates gmon.out
+gprof a.out gmon.out
+

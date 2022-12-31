@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "syslimits.h": "c",
+        "param.h": "c"
+    }
+}

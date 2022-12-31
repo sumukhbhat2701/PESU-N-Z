@@ -1,0 +1,51 @@
+Woke up late: watch recordings till 8.38
+
+PPT!
+
+Why is latency hard to measure?
+- Reason one: watch recordings around 8.55
+- in distributed systems: roundtrip time is fine, but from system1 to system2 => need to synchronized for taking t2 - t1 where t1 is from system1 and t2 is from system2
+
+Why throughput saturates after some amount of load?
+resource contention, scheduling etc overloads increases (like thrashing)
+
+Why cache is fast?
+cahce is smaller than memory => number of multiplexers to get a cache line from cpu will be low as smaller size of cache
+
+Resource utilization:
+1) tool to get for CPU(core): uptime
+uptime gives a one line display of the following information.  The cur‐
+rent time, how long the system has been running,  how  many  users  are
+currently  logged  on,  and the system load averages for the past 1, 5,
+and 15 minutes.
+
+This is the same information contained in the header line displayed  by w
+
+System load averages is the average number of processes that are either
+in a runnable or uninterruptable state.  A process in a runnable  state
+is  either using the CPU or waiting to use the CPU.  A process in unin‐
+terruptable state is waiting for some I/O access, eg waiting for  disk.
+The  averages  are  taken over the three time intervals.  Load averages
+are not normalized for the number of CPUs in a system, so a load  aver‐
+age  of 1 means a single CPU system is loaded all the time while on a 4
+CPU system it means it was idle 75% of the time.
+
+2) top
+3) htop
+gives dyanamic cpu utilization. htop also gives pictorial representation of core utilization of each core. Also, process-wise utilization with pid.
+
+4) lscpu: gives cpu details like architecture, #cores etc
+If, CPUs = 8 and Threads per core = 2(Hyperthreading), then #actual core = 8/2 = 4. #virtual cores = 8
+
+5) /proc : virtual filesystem. No actual file is created. It is from a process table.
+Each folder represents a process with folder name as pid.
+Each folder has /proc/PID/task folder, which contains threads spawned by the process PID 
+Eg:
+Open firefox(a process)
+top | grep firefox, to get PID
+cd /proc/PID/task
+ls -l | wc -l, gives number of threads with 0 tabs
+Open a tab
+ls -l | wc -l, gives number of threads with 1 tabs
+Open a tab
+ls -l | wc -l, gives number of threads with 2 tabs

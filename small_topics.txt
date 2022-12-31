@@ -1,0 +1,22 @@
+- lvalues/rvalues - https://www.youtube.com/watch?v=fbYknr-HPYE
+(lvalues can take only lvalues - int&, unless they are const - can take both lvalues and rvalues - const int&)
+(rvalues can take only to rvalues - int&&) => 5 = a is invalid but a = 5 and a = b is valid
+
+- Move semantics - https://www.youtube.com/watch?v=OWNeCTd7yQE
+		 https://www.youtube.com/watch?v=OWNeCTd7yQE
+		 
+- Reference to Pointer(int*&) - https://www.youtube.com/watch?v=7HmCb343xR8 (no int&*)
+
+- Reference to arrays and Array decay: 
+http://c-faq.com/aryptr/aryptrequiv.html, http://c-faq.com/aryptr/aryptrparam.html, http://c-faq.com/aryptr/aryptr2.html
+Happens at compile time. f(int a[5]) == f(int a[6])
+whenever an array appears in an expression(r-value) and function parameters, the compiler implicitly generates a pointer to the array's first element, just as if the programmer had written &a[0]. (The exceptions are when the array is the operand of a sizeof or & operator, or is a string literal initializer for a character array.)
+Decaying happens only once => therefore a[][] is not allowed => *a[] is undefined, but a[] is defined => *a is defined
+
+So to pass an array without decaying (to have data about N in a[N]) => pass array by reference => f(int (&arr)[5])
+
+- Pointer to an array
+void f(int (*p)[5]) 
+int (*b)[5] = arr;
+=> But it is a pointer to N blocks and not first element => p + 1 => skips by N blocks 
+

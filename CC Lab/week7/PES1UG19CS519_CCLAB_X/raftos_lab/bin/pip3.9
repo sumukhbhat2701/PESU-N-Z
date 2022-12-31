@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/media/sumukhbhat2701/DATA/PESU_Notes/CC Lab/week7/PES1UG19CS519_CCLAB_X/raftos_lab/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

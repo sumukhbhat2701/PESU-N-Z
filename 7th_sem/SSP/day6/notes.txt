@@ -1,0 +1,55 @@
+Gustafson's law:
+	- corollary to ahmdals law
+	- not just depends on amount of serial and partial part, but also the amount of code processed in serial and partial part
+
+S/W Stack component: OS:
+
+Applications
+System libs
+System Calls
+Kernel
+H/w
+
+x86 previlige rings:
+Ring 3 - User
+Ring 2
+Ring 1
+Ring 0 - Kernel
+
+linux: monolithic kernel
+
+Why syscall is not a normal function?
+- need to switch from Ring 3 to Ring 0
+- switches from user space stack to kernel space stack
+- Stores PC, registers(state) of user space executation in the stack
+- Inst. Ptr pointing to user space instructtions switches the kernel space going through following layers:
+	- file name -> File System -> volume, block#
+	- Kernel (manages all other layers)
+	- Device driver: intermediatory between device and OS(kernel)
+	
+- Volumes:
+
+|0			     n-1|  Logical Volume Manager: Gives a logic view as 1 disk
+|disk0	|disk1	| ... |disk n-1	|
+
+- SCSI requests to disk devices can be either from:
+ - FS. eg: FS -> SCSI -> N/w -> SCSI -> disk
+ - LVM. FS -> LVM -> SCSI -> disk
+ - Device Driver Eg: FS -> LVM -> Device Driver -> SCSI -> ISCSI -> N/w -> ISCSI -> PC -> disk. Eg: Open Stack
+ 
+- Linux uses CFS(Completely Fair Scheduling algorithm)
+
+- How is data transferred from disk to memory after data is located on the disk?
+	- interrupt the CPU to setup DMA (Interrupt as an IRQ# and looks us for ISR in the interrupt vector and executes the ISR(interrupt service routine))
+	- DMA reads data and then to the process
+	- CPU reads data? Wrong: Speed of CPU != Speed of Bus => inefficient
+	- Reschedule the process and read? Wrong: Inefficient, a lot of work
+- What if process dies when reading is in progress?
+	- copy data to a kernel space buffer and let process in user space read it from the buffer.
+	
+- Structure of Interrupt handler/ISR: (http://www.makelinux.net/ldd3/chp-10-sect-4.shtml#:~:text=The%20so%2Dcalled%20top%20half,later%2C%20at%20a%20safer%20time.)
+	Top Half: Disabled other interrupts
+	Bottom Half: Enabled other interrupts
+
+- Threads and Process in linux: A TASK, no differentiation
+ 

@@ -1,0 +1,10 @@
+Steps to execute
+
+goto /opt/kafka
+
+./bin/zookeeper-server-start.sh config/zookeeper.properties
+
+./bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --list --bootstrap-server <BROKER-LIST>
+

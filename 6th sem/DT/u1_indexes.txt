@@ -1,0 +1,17 @@
+https://www.arsdcollege.ac.in/wp-content/uploads/2020/03/DBMS-Week3.pdf
+https://www.arsdcollege.ac.in/wp-content/uploads/2020/04/DBMS-Week4.pdf
+
+http://web2.uwindsor.ca/courses/cs/rituch/415/ExIndexes_Soln.pdf
+
+Gate Smashers - TYPES OF INDICES: Primary, Clustered, Secondary Indices
+
+			Key	Non-key
+			
+Ordered data   ->    Primary	Cluster  	=> CLUSTERED(Sparse(preferred)/dense)
+Unordered data ->   Secondary	Secondary       => NON CLUSTERED (Always dense)
+						 (can make sparse for non-key
+						 by using indirection and buckets) 
+
+Multilevel index
+First level - dense/sparse
+Next levels - always sparse! 
